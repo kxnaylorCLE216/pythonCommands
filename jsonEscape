@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import pyperclip
+import json
+import sys
+
+json_command_string = input('Input JSON string: ')
+
+escaped_json = json.loads(json_command_string.replace("\'", '"'))
+
+converted_json = json.loads(escaped_json)
+
+print(json.dumps(converted_json, sort_keys=True, indent=4))
+
+pyperclip.copy(json.dumps(converted_json, sort_keys=True, indent=4))
