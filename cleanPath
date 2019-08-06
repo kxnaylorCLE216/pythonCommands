@@ -1,0 +1,14 @@
+
+#!/usr/bin/env python3
+
+import sys
+import pyperclip
+
+import os
+
+path_string = input('Input PATH: ')
+
+new_path = path_string.replace('\\\\', '\\')
+print(new_path)
+
+pyperclip.copy(new_path)
