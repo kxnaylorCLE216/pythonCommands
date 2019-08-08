@@ -4,7 +4,10 @@ import pyperclip
 import json
 import sys
 
-json_command_string = input('Input JSON string: ')
+#json_command_string = sys.argv
+for arg in sys.argv:
+    print(arg)
+json_command_string = input("wat")
 
 escaped_json = json.loads(json_command_string.replace("\'", '"'))
 
